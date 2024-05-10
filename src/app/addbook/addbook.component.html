@@ -1,0 +1,32 @@
+<div class="container">
+    <br>
+    <h1 style="text-align: center;">Add Book</h1>
+  <div class="container mt-3 col-sm-6 ">
+    <form ngNativeValidate action="" method="post">
+    
+        
+        
+        <div class="mb-3 mt-3">
+            <label for="bookname" class="form-label">Book Name</label>
+            <input type="text" class="form-control" id="bookname" name="bookname" [(ngModel)]="book.bookName" >
+        </div>
+        <div class="mb-3 mt-3">
+            <label for="bookauthor" class="form-label">Book Author</label>
+            <input type="text" class="form-control" id="bookauthor" name="bookauthor" [(ngModel)]="book.bookAuthor" >
+        </div>
+        <div class="mb-3 mt-3" >
+            <label for="bookprice" class="form-label">Book Price</label>
+            <input type="number" class="form-control" id="bookprice" name="bookprice" [(ngModel)]="book.bookPrice"  >
+        </div>
+        <div class="mb-3 mt-3">
+            <label for="bookqt" class="form-label">Quantity</label>
+            <input type="number" class="form-control" id="bookqt" name="bookqt" [(ngModel)]="book.bookQt" >
+        </div>
+        <div class="mb-3 mt-3">
+            <input type="submit" class="form-control btn btn-success" value="Submit" (click)="add()" *ngIf="book.bookName && book.bookAuthor && book.bookPrice && book.bookQt"  >
+        </div>
+      </form>
+     
+
+  </div>  
+  

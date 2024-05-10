@@ -1,0 +1,37 @@
+<div class="container">
+    <h1 style="text-align: center;">Book List</h1>
+    <br>
+    <div class="container col-sm-9">
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">id </th>
+                    <th>Name </th>
+                    <th>Author </th>
+                    <th>Price </th>
+                    <th>Quantity </th>
+                    <th>Action</th>
+                    <th>Action</th>
+                </tr>
+               
+            </thead>
+            <tbody>
+                <tr *ngFor="let b of books">
+                 <td>{{b.id}}</td>
+                 <td>{{b.bookName}}</td>
+                 <td>{{b.bookAuthor}}</td>
+                 <td>{{b.bookPrice}}</td>
+                 <td>{{b.bookQt}}</td>
+                 <td><button class="btn btn-sm btn-success">Edit</button></td>
+                 <td><button class="btn  btn-sm btn-danger">Delete</button></td>
+           
+                </tr>
+            </tbody>
+            
+        </table>
+    </div>
+    
+
+
+    
+</div>
