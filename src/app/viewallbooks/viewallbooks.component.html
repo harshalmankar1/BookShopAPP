@@ -16,14 +16,14 @@
                
             </thead>
             <tbody>
-                <tr *ngFor="let b of books">
+                <tr *ngFor="let b of books;let i=index">
                  <td>{{b.id}}</td>
                  <td>{{b.bookName}}</td>
                  <td>{{b.bookAuthor}}</td>
                  <td>{{b.bookPrice}}</td>
                  <td>{{b.bookQt}}</td>
-                 <td><button class="btn btn-sm btn-success">Edit</button></td>
-                 <td><button class="btn  btn-sm btn-danger">Delete</button></td>
+                 <td><button class="btn btn-sm btn-success" (click)="edit(b.id)">Edit</button></td>
+                 <td><button class="btn  btn-sm btn-danger" (click)="deletebook(b.id,i)">Delete</button></td>
            
                 </tr>
             </tbody>
